@@ -29,3 +29,14 @@ for(let i =0 ;i<starterTasks.length;i++){
     // list.innerHTML +="<li><span>"+starterTasks[i]+"</span></li>"
     addTasktoPage(starterTasks[i])
 }
+
+const themeBtn = document.getElementById("themeBtn")
+themeBtn.addEventListener("click",()=>{
+    document.body.classList.toggle("dark")
+    if (document.body.classList.contains("dark")){
+        themeBtn.innerText = "Dark Mode"
+    }
+    else{
+        themeBtn.innerText = "Light Mode"
+    }
+})
