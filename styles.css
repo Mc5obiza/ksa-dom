@@ -1,0 +1,175 @@
+/* TaskBuddy styles: provided to students, nobody writes CSS in this course */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef1f6;
+    color: #1c2230;
+    margin: 0;
+    padding: 24px;
+}
+
+#app {
+    max-width: 460px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+#greeting {
+    color: #5b6475;
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #c9d0dc;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #3b6fd4;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2f5cb5;
+}
+
+#message {
+    color: #c0392b;
+    min-height: 22px;
+}
+
+#filters {
+    display: flex;
+    gap: 8px;
+    margin: 8px 0;
+    flex-wrap: wrap;
+}
+
+.filter {
+    background: #dde3ee;
+    color: #1c2230;
+}
+
+.filter:hover {
+    background: #cdd5e4;
+}
+
+.filter.active {
+    background: #3b6fd4;
+    color: #ffffff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e9f0;
+}
+
+li span {
+    cursor: pointer;
+    flex: 1;
+}
+
+li button {
+    background: #d9534f;
+}
+
+li button:hover {
+    background: #c0392b;
+}
+
+.done span {
+    text-decoration: line-through;
+    color: #8a93a3;
+}
+
+.hidden {
+    display: none;
+}
+
+.highlight {
+    color: #e2552b;
+    font-weight: bold;
+}
+
+#counter {
+    color: #5b6475;
+}
+
+/* Dark mode (switched on by JavaScript adding the class "dark" to the body) */
+body.dark {
+    background: #14181f;
+    color: #f1f1f1;
+}
+
+body.dark #app {
+    background: #1f2630;
+    box-shadow: none;
+}
+
+body.dark #greeting,
+body.dark #counter {
+    color: #aab3c5;
+}
+
+body.dark #taskInput {
+    background: #2a3340;
+    color: #f1f1f1;
+    border-color: #3a4658;
+}
+
+body.dark li {
+    border-color: #2f3947;
+}
+
+body.dark .filter {
+    background: #2f3947;
+    color: #f1f1f1;
+}
+
+body.dark .filter.active {
+    background: #3b6fd4;
+    color: #ffffff;
+}
+
+body.dark .done span {
+    color: #7a8497;
+}
