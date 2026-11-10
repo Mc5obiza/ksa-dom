@@ -53,3 +53,8 @@ function handleAdd(){
 
 
 addbtn.addEventListener("click",handleAdd)
+input.addEventListener("keydown",(e)=>{
+    if (e.key == "Enter"){
+        handleAdd()
+    }
+})
