@@ -40,3 +40,16 @@ themeBtn.addEventListener("click",()=>{
         themeBtn.innerText = "Light Mode"
     }
 })
+
+const input = document.getElementById("taskInput")
+const addbtn = document.getElementById("addBtn")
+
+function handleAdd(){
+    const text = input.value.trim()
+    addTasktoPage(text)
+
+    input.value = ""
+}
+
+
+addbtn.addEventListener("click",handleAdd)
