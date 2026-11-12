@@ -19,11 +19,18 @@ function addTasktoPage(text){
     const span = document.createElement("span")
 
     span.innerText = text
-    li.appendChild(span) //adds
-    list.appendChild(li)
     span.addEventListener("click",()=>{
         li.classList.toggle("done")
     })
+    const delbtn = document.createElement("button")
+    delbtn.addEventListener("click",()=>{
+        li.remove()
+    })
+    delbtn.innerText = "Delete"
+    li.appendChild(span) //adds
+    li.appendChild(delbtn)
+    list.appendChild(li)
+    
 }
 for(let i =0 ;i<starterTasks.length;i++){
     // list.innerHTML +="<li><span>"+starterTasks[i]+"</span></li>"
@@ -43,14 +50,19 @@ themeBtn.addEventListener("click",()=>{
 
 const input = document.getElementById("taskInput")
 const addbtn = document.getElementById("addBtn")
-
+const message = document.getElementById("message")
 function handleAdd(){
     const text = input.value.trim()
+    if (!text){
+        message.innerText = "Please Try something first!!"
+        return;
+    } 
     addTasktoPage(text)
-
+    if (message){
+        message.innerText= ""
+    }
     input.value = ""
 }
-
 
 addbtn.addEventListener("click",handleAdd)
 input.addEventListener("keydown",(e)=>{
@@ -58,3 +70,4 @@ input.addEventListener("keydown",(e)=>{
         handleAdd()
     }
 })
+
